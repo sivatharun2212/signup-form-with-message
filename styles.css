@@ -1,0 +1,225 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+:root {
+      
+--Tomato: hsl(4, 100%, 67%);
+
+
+
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+
+* {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+}
+
+
+.main-container {
+      background-color: var(--Charcoal-Grey);
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.container {
+      background-color: var(--White);
+      width: 55%;
+      height: 80%;
+      display: flex;
+      border-radius: 20px;
+      padding: 20px;
+
+
+}
+
+.img-holder {
+      width: 40%;
+      height: 100%;
+
+      background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+      background-size: cover;
+      background-position: center;
+}
+
+.info-container {
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px;
+}
+
+.info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+}
+.info h1 {
+      font-size: 40px;
+}
+.list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+}
+
+
+.description, .item-info {
+      font-size: 16px;
+}
+.item {
+      display: flex;
+      gap: 10px;
+}
+
+.form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      
+}
+
+.label {
+      font-size: 12px;
+      margin-bottom: 10px;
+      font-weight: bold;
+}
+
+
+.email {
+      width: 90%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      border: 1px solid var(--Grey);
+      border-radius: 8px;
+      outline: none;
+}
+
+.submit {
+      width: 90%;
+      height: 40px;
+      border-radius: 8px;
+      border: none;
+      background-color: var(--Dark-Slate-Grey);
+      color: var(--White);
+      cursor: pointer;
+}
+
+.email:invalid{
+      border: 1px solid var(--Tomato); 
+}
+
+.submit:hover{
+      background-image: linear-gradient(to right, var(--Tomato),rgb(238, 133, 151));
+}
+
+.message {
+      background-color: var(--White);
+      width: 400px;
+      height: 400px;
+      border-radius: 15px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 30px  50px;
+}
+
+.message span {
+      color: var(--Dark-Slate-Grey);
+      font-weight: bold;
+}
+.submit-btn {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      border: none;
+      background-color: var(--Dark-Slate-Grey);
+      color: var(--White);
+      cursor: pointer;
+}
+
+.submit-btn:hover{
+      background-image: linear-gradient(to right, var(--Tomato),rgb(238, 133, 151));
+}
+
+
+.showMessage .container{
+      display: none;
+}
+
+.showMessage .message{
+      display: flex;
+}
+
+.showForm .message {
+      display: none;
+}
+.showForm .container {
+      display: flex;
+}
+
+.message img {
+      width: 50px;
+}
+
+.message h1 {
+      font-size: 40px;
+}
+
+
+@media screen and (max-width: 375px) {
+      .container{
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            flex-direction: column-reverse;
+            padding: 10px;
+      }
+      .img-holder {
+            width: 100%;
+            height: 500px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+      }
+
+      .info-container {
+            width: 100%;
+            gap: 20px;
+            padding: 8px;
+      }
+      .info {
+            gap: 10px;
+      }
+
+      .message {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 0px  20px;
+            padding-top: 100px;
+      }
+
+      .message button {
+            position: absolute;
+            bottom: 50px;
+            width: 90%;
+      }
+}
